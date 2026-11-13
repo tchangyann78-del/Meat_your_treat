@@ -65,6 +65,14 @@
   .resume{background:var(--vert-clair);border-radius:12px;padding:12px;font-size:.9rem;color:var(--vert-fonce);margin-top:4px}
   .astuce{font-size:.78rem;color:var(--gris);text-align:center;margin-top:8px}
   .note{font-size:.8rem;color:var(--gris);text-align:center;margin-top:18px;padding:0 10px}
+  .preuve{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+  .p-ctrl{background:#f2b33d;color:#3a2e00}
+  .p-just{background:#fff;color:#7a5a00;border:1.5px solid #f2b33d}
+  .p-decl{background:#fff;color:#6b6b6b;border:1.5px solid #c9c9c9}
+  .p-moy{background:var(--vert-clair);color:var(--vert-fonce)}
+  .niveaux{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:.78rem;color:var(--gris);align-items:center}
+  .info .preuve{margin:4px 0 0;display:inline-block}
+  .src{display:block;font-size:.72rem;color:var(--gris);margin-top:2px}
   footer{text-align:center;font-size:.75rem;color:var(--gris);padding-bottom:30px}
 </style>
 </head>
@@ -79,9 +87,10 @@
 
   <main>
     <section class="card produit">
-      <h2>Entrecôte de bœuf · 350 g</h2>
-      <p class="sous">Lot n° MYT-2026-0417 · Emballé le 10/11/2026</p>
-      <div class="badge">✔ Traçabilité vérifiée de l'élevage au rayon</div>
+      <h2>Steak de bœuf · 350 g</h2>
+      <p class="sous">Lot n° 2026-0417 · Emballé le 10/11/2026</p>
+      <div class="badge">Chaque information affiche sa source</div>
+      <div class="niveaux"><span style="white-space:nowrap"><span class="preuve p-ctrl">Contrôlé</span> vérifié par un tiers</span><span style="white-space:nowrap"><span class="preuve p-just">Justifié</span> appuyé par un document</span><span style="white-space:nowrap"><span class="preuve p-decl">Déclaré</span> affirmé par l'entreprise</span></div>
     </section>
 
     <section class="card">
@@ -127,53 +136,50 @@
         </div>
       </details>
 
-      <div class="resume">💬 <b>En clair :</b> un bœuf charolais 100 % français, élevé à l'herbe en Bourgogne, d'une qualité contrôlée au-dessus de la moyenne. Et ce que les labels ne disent pas (la ferme, le prix juste), Meat Your Treat vous le montre juste en dessous.</div>
+      <div class="resume">💬 <b>En clair :</b> un bœuf charolais 100 % français, élevé à l'herbe en Bourgogne, d'une qualité contrôlée au-dessus de la moyenne. Et ce que les labels ne disent pas (la ferme, la répartition du prix), Meat Your Treat vous le montre juste en dessous.</div>
       <p class="astuce">Touchez un label pour voir sa traduction</p>
     </section>
 
     <section class="card">
       <h3>🌿 D'où vient votre viande ?</h3>
       <div class="infos">
-        <div class="info"><span>Race</span><b>Charolaise</b></div>
-        <div class="info"><span>Région</span><b>Saône-et-Loire</b></div>
-        <div class="info"><span>Élevage</span><b>Ferme des Prés Verts*</b></div>
-        <div class="info"><span>Alimentation</span><b>Herbe + foin, sans OGM</b></div>
-        <div class="info"><span>Âge à l'abattage</span><b>30 mois</b></div>
-        <div class="info"><span>Distance parcourue</span><b>≈ 180 km</b></div>
+        <div class="info"><span>Race</span><b>Charolaise</b><br><i class="preuve p-ctrl">Contrôlé</i><small class="src">Passeport bovin (BDNI)</small></div>
+        <div class="info"><span>Région</span><b>Saône-et-Loire</b><br><i class="preuve p-ctrl">Contrôlé</i><small class="src">Passeport bovin (BDNI)</small></div>
+        <div class="info"><span>Élevage</span><b>Ferme des Prés Verts*</b><br><i class="preuve p-ctrl">Contrôlé</i><small class="src">Passeport bovin (BDNI)</small></div>
+        <div class="info"><span>Alimentation</span><b>Herbe + foin, sans OGM</b><br><i class="preuve p-just">Justifié</i><small class="src">Attestation fournie par l'éleveur</small></div>
+        <div class="info"><span>Âge à l'abattage</span><b>30 mois</b><br><i class="preuve p-ctrl">Contrôlé</i><small class="src">Passeport bovin (BDNI)</small></div>
+        <div class="info"><span>Distance parcourue</span><b>≈ 180 km</b><br><i class="preuve p-decl">Déclaré</i><small class="src">Industriel</small></div>
       </div>
     </section>
 
     <section class="card">
       <h3>🚚 Son parcours</h3>
       <ul class="timeline">
-        <li><span class="date">Mai 2024</span><b>Naissance & élevage</b><small>Ferme des Prés Verts, Charolles (71)</small></li>
-        <li><span class="date">28/10/2026</span><b>Abattage</b><small>Abattoir agréé, Bourgogne</small></li>
-        <li><span class="date">05/11/2026</span><b>Découpe & maturation</b><small>Atelier de découpe régional</small></li>
-        <li><span class="date">10/11/2026</span><b>Conditionnement</b><small>Emballage & étiquetage du lot</small></li>
-        <li><span class="date">12/11/2026</span><b>Mise en rayon</b><small>Votre magasin</small></li>
+        <li><span class="date">Mai 2024</span><b>Naissance & élevage <i class="preuve p-ctrl">Contrôlé</i></b><small>Ferme des Prés Verts, Charolles (71)</small></li>
+        <li><span class="date">28/10/2026</span><b>Abattage <i class="preuve p-ctrl">Contrôlé</i></b><small>Abattoir agréé, Bourgogne</small></li>
+        <li><span class="date">05/11/2026</span><b>Découpe & maturation <i class="preuve p-just">Justifié</i></b><small>Atelier de découpe régional</small></li>
+        <li><span class="date">10/11/2026</span><b>Conditionnement <i class="preuve p-decl">Déclaré</i></b><small>Emballage & étiquetage du lot</small></li>
+        <li><span class="date">12/11/2026</span><b>Mise en rayon <i class="preuve p-decl">Déclaré</i></b><small>Votre magasin</small></li>
       </ul>
     </section>
 
     <section class="card">
       <h3>💶 Où va votre argent ?</h3>
-      <p class="prix-total">Prix payé : <b>9,80 €</b></p>
+      <p class="prix-total">Prix payé : <b>9,80 €</b> <i class="preuve p-moy">Moyenne nationale</i></p>
       <div class="barre">
-        <div class="c1" style="width:34%"></div>
-        <div class="c2" style="width:14%"></div>
-        <div class="c3" style="width:16%"></div>
-        <div class="c4" style="width:30%"></div>
-        <div class="c5" style="width:6%"></div>
+        <div class="c1" style="width:63%"></div>
+        <div class="c2" style="width:12%"></div>
+        <div class="c4" style="width:25%"></div>
       </div>
       <ul class="legende">
-        <li><span><i class="pastille c1"></i>Éleveur</span><b>3,33 € · 34 %</b></li>
-        <li><span><i class="pastille c2"></i>Abattage & découpe</span><b>1,37 € · 14 %</b></li>
-        <li><span><i class="pastille c3"></i>Transport & emballage</span><b>1,57 € · 16 %</b></li>
-        <li><span><i class="pastille c4"></i>Distributeur</span><b>2,94 € · 30 %</b></li>
-        <li><span><i class="pastille c5"></i>Taxes (TVA 5,5 %)</span><b>0,59 € · 6 %</b></li>
+        <li><span><i class="pastille c1"></i>L'éleveur (prix de l'animal)</span><b>6,17 € · 63 %</b></li>
+        <li><span><i class="pastille c2"></i>Abattage & découpe</span><b>1,18 € · 12 %</b></li>
+        <li><span><i class="pastille c4"></i>Magasin (distribution)</span><b>2,45 € · 25 %</b></li>
       </ul>
+      <p class="src" style="margin-top:8px">Répartition moyenne du bœuf en grande surface (Observatoire de la formation des prix et des marges), appliquée à ce prix. Ce n'est pas son bénéfice : l'éleveur paie encore ses frais avec. TVA (5,5 %) incluse : 0,51 €.</p>
     </section>
 
-    <p class="note">* Élevage et chiffres fictifs, utilisés pour la démonstration du concept Meat Your Treat. Un seul QR code à la place de la multitude de labels.</p>
+    <p class="note">* Élevage et chiffres fictifs, utilisés pour la démonstration du concept Meat Your Treat. Un seul QR code pour traduire tous les labels.</p>
   </main>
 
   <footer>© 2026 Meat Your Treat · Projet 36H Chrono</footer>
