@@ -47,6 +47,23 @@
   .legende li:last-child{border:none}
   .pastille{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px}
   .c1{background:#1f7a3a}.c2{background:#5bb36f}.c3{background:#a8d8b3}.c4{background:#f2b33d}.c5{background:#c9c9c9}
+  .slogan{font-size:.85rem;color:var(--gris);margin:-6px 0 12px}
+  .label{background:var(--fond);border-radius:12px;margin-bottom:10px;overflow:hidden}
+  .label summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:12px}
+  .label summary::-webkit-details-marker{display:none}
+  .label .ico{width:38px;height:38px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;
+              justify-content:center;font-weight:800;font-size:.7rem;color:#fff;text-align:center;line-height:1.1}
+  .label .nom{flex:1}
+  .label .nom b{display:block;font-size:.95rem}
+  .label .nom small{color:var(--gris);font-size:.8rem}
+  .label .fleche{color:var(--vert);font-weight:700;transition:transform .2s}
+  .label[open] .fleche{transform:rotate(90deg)}
+  .trad{padding:0 12px 12px}
+  .trad .ligne{display:flex;gap:8px;font-size:.88rem;padding:6px 0;border-top:1px solid #e9ece9}
+  .trad .ligne span:first-child{flex-shrink:0}
+  .trad .ligne b{color:var(--vert-fonce)}
+  .resume{background:var(--vert-clair);border-radius:12px;padding:12px;font-size:.9rem;color:var(--vert-fonce);margin-top:4px}
+  .astuce{font-size:.78rem;color:var(--gris);text-align:center;margin-top:8px}
   .note{font-size:.8rem;color:var(--gris);text-align:center;margin-top:18px;padding:0 10px}
   footer{text-align:center;font-size:.75rem;color:var(--gris);padding-bottom:30px}
 </style>
@@ -65,6 +82,53 @@
       <h2>Entrecôte de bœuf · 350 g</h2>
       <p class="sous">Lot n° MYT-2026-0417 · Emballé le 10/11/2026</p>
       <div class="badge">✔ Traçabilité vérifiée de l'élevage au rayon</div>
+    </section>
+
+    <section class="card">
+      <h3>🏷️ Les labels de ce produit, traduits</h3>
+      <p class="slogan">Ce que chaque logo de l'emballage veut vraiment dire.</p>
+
+      <details class="label">
+        <summary>
+          <div class="ico" style="background:#c8102e">Label<br>Rouge</div>
+          <div class="nom"><b>Label Rouge</b><small>Qualité supérieure</small></div>
+          <span class="fleche">›</span>
+        </summary>
+        <div class="trad">
+          <div class="ligne"><span>✅</span><span><b>Ce que ça garantit :</b> une viande de qualité supérieure à la moyenne, avec un cahier des charges officiel (race à viande, temps passé au pâturage, maturation minimale…).</span></div>
+          <div class="ligne"><span>🔍</span><span><b>Qui contrôle :</b> un organisme indépendant agréé par l'État, pas le producteur lui-même.</span></div>
+          <div class="ligne"><span>⚠️</span><span><b>Ce que ça ne dit pas :</b> ce n'est pas du bio, et ça ne dit pas de quelle ferme vient la viande.</span></div>
+        </div>
+      </details>
+
+      <details class="label">
+        <summary>
+          <div class="ico" style="background:#0055a4">VBF</div>
+          <div class="nom"><b>Viande Bovine Française</b><small>Origine France</small></div>
+          <span class="fleche">›</span>
+        </summary>
+        <div class="trad">
+          <div class="ligne"><span>✅</span><span><b>Ce que ça garantit :</b> l'animal est né, a été élevé, abattu et découpé en France.</span></div>
+          <div class="ligne"><span>🔍</span><span><b>Qui contrôle :</b> l'interprofession de la filière bovine, avec des audits.</span></div>
+          <div class="ligne"><span>⚠️</span><span><b>Ce que ça ne dit pas :</b> rien sur la qualité, l'alimentation ou le mode d'élevage. C'est une origine, pas une qualité.</span></div>
+        </div>
+      </details>
+
+      <details class="label">
+        <summary>
+          <div class="ico" style="background:#f2b33d;color:#3a2e00">IGP</div>
+          <div class="nom"><b>IGP Charolais de Bourgogne</b><small>Indication géographique protégée</small></div>
+          <span class="fleche">›</span>
+        </summary>
+        <div class="trad">
+          <div class="ligne"><span>✅</span><span><b>Ce que ça garantit :</b> une vraie race charolaise, élevée dans une zone géographique délimitée, avec une alimentation majoritairement à base d'herbe.</span></div>
+          <div class="ligne"><span>🔍</span><span><b>Qui contrôle :</b> un organisme certificateur, sous l'égide de l'INAO, reconnu au niveau européen.</span></div>
+          <div class="ligne"><span>⚠️</span><span><b>Ce que ça ne dit pas :</b> combien touche l'éleveur sur le prix que vous payez.</span></div>
+        </div>
+      </details>
+
+      <div class="resume">💬 <b>En clair :</b> un bœuf charolais 100 % français, élevé à l'herbe en Bourgogne, d'une qualité contrôlée au-dessus de la moyenne. Et ce que les labels ne disent pas (la ferme, le prix juste), Meat Your Treat vous le montre juste en dessous.</div>
+      <p class="astuce">Touchez un label pour voir sa traduction</p>
     </section>
 
     <section class="card">
